@@ -1,38 +1,56 @@
-// ===============================
+// =============================
 // AOS ANIMATION
-// ===============================
+// =============================
 
 AOS.init({
-    duration: 1500,
+    duration: 1200,
     once: false
 });
 
-// ===============================
+
+// =============================
 // BUKA UNDANGAN
-// ===============================
+// =============================
 
 function openInvitation() {
 
-    // Tampilkan isi undangan
     document.getElementById('content').style.display = 'block';
 
-    // Scroll ke isi undangan
     document.getElementById('content').scrollIntoView({
         behavior: 'smooth'
     });
 
-    // Putar musik
     const music = document.getElementById('music');
 
-    music.play().catch(function (err) {
-        console.log(err);
+    music.play().catch(function(error){
+        console.log(error);
     });
-
 }
 
-// ===============================
+
+// =============================
+// NAMA TAMU OTOMATIS
+// contoh:
+// ?to=Yogi Rinaldi
+// =============================
+
+window.onload = function () {
+
+    const params = new URLSearchParams(window.location.search);
+
+    const guest = params.get('to');
+
+    if (guest) {
+        document.getElementById('guestName').innerHTML =
+            decodeURIComponent(guest.replace(/\+/g, ' '));
+    }
+
+};
+
+
+// =============================
 // COUNTDOWN
-// ===============================
+// =============================
 
 const weddingDate = new Date("July 05, 2026 09:00:00").getTime();
 
@@ -45,110 +63,122 @@ const countdown = setInterval(function () {
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
     const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24))
-        / (1000 * 60 * 60)
+        (distance % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
     );
 
     const minutes = Math.floor(
-        (distance % (1000 * 60 * 60))
-        / (1000 * 60)
+        (distance % (1000 * 60 * 60)) /
+        (1000 * 60)
     );
 
     const seconds = Math.floor(
-        (distance % (1000 * 60))
-        / 1000
+        (distance % (1000 * 60)) /
+        1000
     );
 
-    const countdownElement = document.getElementById('countdown');
+    document.getElementById('countdown').innerHTML = `
 
-    if (countdownElement) {
+        <div class="time-box">
+            <div class="number">${days}</div>
+            <div>Hari</div>
+        </div>
 
-        countdownElement.innerHTML = `
-            <div class="time-box">
-                <span class="number">${days}</span>
-                <span class="label">Hari</span>
-            </div>
+        <div class="time-box">
+            <div class="number">${hours}</div>
+            <div>Jam</div>
+        </div>
 
-            <div class="time-box">
-                <span class="number">${hours}</span>
-                <span class="label">Jam</span>
-            </div>
+        <div class="time-box">
+            <div class="number">${minutes}</div>
+            <div>Menit</div>
+        </div>
 
-            <div class="time-box">
-                <span class="number">${minutes}</span>
-                <span class="label">Menit</span>
-            </div>
+        <div class="time-box">
+            <div class="number">${seconds}</div>
+            <div>Detik</div>
+        </div>
 
-            <div class="time-box">
-                <span class="number">${seconds}</span>
-                <span class="label">Detik</span>
-            </div>
-        `;
-    }
+    `;
 
     if (distance < 0) {
 
         clearInterval(countdown);
 
-        countdownElement.innerHTML =
+        document.getElementById('countdown').innerHTML =
             "<h3>Acara Sedang Berlangsung</h3>";
     }
 
 }, 1000);
 
 
-// ===============================
-// ANIMASI BUNGA JATUH
-// ===============================
+// =============================
+// BUNGA BERJATUHAN
+// =============================
 
 const flowersContainer = document.querySelector('.flowers');
 
 function createFlower() {
 
-    if (!flowersContainer) return;
-
     const flower = document.createElement('div');
 
     flower.classList.add('flower');
 
-    const icons = ['🌸', '🌺', '🌷', '💮'];
+    const flowers = ['🌸', '🌺', '🌷', '💮'];
 
     flower.innerHTML =
-        icons[Math.floor(Math.random() * icons.length)];
+        flowers[Math.floor(Math.random() * flowers.length)];
 
-    flower.style.left =
-        Math.random() * 100 + 'vw';
-
-    flower.style.animationDuration =
-        (Math.random() * 5 + 5) + 's';
+    flower.style.left = Math.random() * 100 + 'vw';
 
     flower.style.fontSize =
-        (Math.random() * 15 + 18) + 'px';
+        Math.random() * 15 + 20 + 'px';
+
+    flower.style.animationDuration =
+        Math.random() * 5 + 6 + 's';
 
     flowersContainer.appendChild(flower);
 
     setTimeout(() => {
         flower.remove();
     }, 10000);
-
 }
 
-setInterval(createFlower, 500);
+setInterval(createFlower, 700);
 
 
-// ===============================
-// PARALLAX EFFECT
-// ===============================
+// =============================
+// BUKU TAMU SEDERHANA
+// =============================
 
-window.addEventListener('scroll', function () {
+const rsvpButton = document.querySelector('.rsvp button');
 
-    const scrollPosition = window.pageYOffset;
+if (rsvpButton) {
 
-    document.querySelectorAll('.card').forEach(card => {
+    rsvpButton.addEventListener('click', function () {
 
-        card.style.transform =
-            `translateY(${scrollPosition * 0.01}px)`;
+        const nama =
+            document.querySelector('.rsvp input').value;
+
+        const ucapan =
+            document.querySelector('.rsvp textarea').value;
+
+        if (nama === '' || ucapan === '') {
+
+            alert('Silakan isi nama dan ucapan.');
+
+            return;
+        }
+
+        alert(
+            'Terima kasih ' +
+            nama +
+            ' atas doa dan ucapannya ❤️'
+        );
+
+        document.querySelector('.rsvp input').value = '';
+        document.querySelector('.rsvp textarea').value = '';
 
     });
 
-});
+}
