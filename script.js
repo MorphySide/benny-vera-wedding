@@ -42,3 +42,32 @@ const countdown = setInterval(function () {
     }
 
 }, 1000);
+
+// Animasi bunga jatuh
+
+const flowersContainer = document.querySelector('.flowers');
+
+function createFlower(){
+
+    const flower = document.createElement('div');
+
+    flower.classList.add('flower');
+
+    flower.innerHTML = '🌸';
+
+    flower.style.left = Math.random() * 100 + 'vw';
+
+    flower.style.animationDuration =
+        (Math.random() * 5 + 5) + 's';
+
+    flower.style.fontSize =
+        (Math.random() * 20 + 15) + 'px';
+
+    flowersContainer.appendChild(flower);
+
+    setTimeout(() => {
+        flower.remove();
+    },10000);
+}
+
+setInterval(createFlower,500);
