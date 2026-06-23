@@ -197,3 +197,42 @@ section{
         opacity:0;
     }
 }
+
+/* ORNAMEN KIRI DAN KANAN */
+
+body::before,
+body::after{
+    content: "❦";
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 90px;
+    color: rgba(212, 175, 55, 0.4);
+    z-index: 1;
+    animation: glow 3s ease-in-out infinite;
+}
+
+body::before{
+    left: 20px;
+}
+
+body::after{
+    right: 20px;
+}
+
+@keyframes glow{
+    0%{
+        opacity: .3;
+        transform: translateY(-50%) scale(1);
+    }
+
+    50%{
+        opacity: .8;
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    100%{
+        opacity: .3;
+        transform: translateY(-50%) scale(1);
+    }
+}
