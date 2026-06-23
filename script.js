@@ -1,83 +1,111 @@
-// =============================
-// AOS ANIMATION
-// =============================
+```javascript
+// =========================
+// INISIALISASI AOS
+// =========================
 
 AOS.init({
-    duration: 1200,
-    once: false
+    duration: 1000,
+    once: true
 });
 
-
-// =============================
+// =========================
 // BUKA UNDANGAN
-// =============================
+// =========================
 
 function openInvitation() {
 
+    // simpan status sudah dibuka
+    localStorage.setItem('opened', 'true');
+
+    // tampilkan isi undangan
     document.getElementById('content').style.display = 'block';
 
-    document.getElementById('content').scrollIntoView({
-        behavior: 'smooth'
-    });
+    // sembunyikan cover
+    document.querySelector('.hero').style.display = 'none';
 
+    // putar musik
     const music = document.getElementById('music');
 
     music.play().catch(function(error){
         console.log(error);
     });
+
+    // scroll ke atas
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }
 
+// =========================
+// CEK SAAT HALAMAN DIBUKA
+// =========================
 
-// =============================
-// NAMA TAMU OTOMATIS
-// contoh:
-// ?to=Yogi Rinaldi
-// =============================
+window.onload = function(){
 
-window.onload = function () {
+    // jika sudah pernah membuka
+    if(localStorage.getItem('opened') === 'true'){
+
+        document.getElementById('content').style.display = 'block';
+
+        document.querySelector('.hero').style.display = 'none';
+    }
+
+    // mengambil nama tamu dari URL
+    // contoh:
+    // ?to=Yogi Rinaldi
 
     const params = new URLSearchParams(window.location.search);
 
     const guest = params.get('to');
 
-    if (guest) {
+    if(guest){
+
         document.getElementById('guestName').innerHTML =
-            decodeURIComponent(guest.replace(/\+/g, ' '));
+            decodeURIComponent(guest);
     }
 
 };
 
 
-// =============================
+// =========================
 // COUNTDOWN
-// =============================
+// =========================
 
-const weddingDate = new Date("July 05, 2026 09:00:00").getTime();
+const weddingDate =
+new Date("July 05, 2026 09:00:00").getTime();
 
-const countdown = setInterval(function () {
+setInterval(function(){
 
     const now = new Date().getTime();
 
     const distance = weddingDate - now;
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const days = Math.floor(
+        distance / (1000 * 60 * 60 * 24)
+    );
 
     const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) /
-        (1000 * 60 * 60)
+        (distance % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60)
     );
 
     const minutes = Math.floor(
-        (distance % (1000 * 60 * 60)) /
-        (1000 * 60)
+        (distance % (1000 * 60 * 60))
+        / (1000 * 60)
     );
 
     const seconds = Math.floor(
-        (distance % (1000 * 60)) /
-        1000
+        (distance % (1000 * 60))
+        / 1000
     );
 
-    document.getElementById('countdown').innerHTML = `
+    const countdown =
+        document.getElementById('countdown');
+
+    if(countdown){
+
+        countdown.innerHTML = `
 
         <div class="time-box">
             <div class="number">${days}</div>
@@ -99,86 +127,32 @@ const countdown = setInterval(function () {
             <div>Detik</div>
         </div>
 
-    `;
-
-    if (distance < 0) {
-
-        clearInterval(countdown);
-
-        document.getElementById('countdown').innerHTML =
-            "<h3>Acara Sedang Berlangsung</h3>";
+        `;
     }
 
 }, 1000);
 
 
-// =============================
-// BUNGA BERJATUHAN
-// =============================
+// =========================
+// SCROLL HALUS
+// =========================
 
-const flowersContainer = document.querySelector('.flowers');
+document.querySelectorAll('a[href^="#"]')
+.forEach(anchor => {
 
-function createFlower() {
+    anchor.addEventListener('click', function(e){
 
-    const flower = document.createElement('div');
+        e.preventDefault();
 
-    flower.classList.add('flower');
+        document.querySelector(
+            this.getAttribute('href')
+        ).scrollIntoView({
 
-    const flowers = ['🌸', '🌺', '🌷', '💮'];
+            behavior: 'smooth'
 
-    flower.innerHTML =
-        flowers[Math.floor(Math.random() * flowers.length)];
-
-    flower.style.left = Math.random() * 100 + 'vw';
-
-    flower.style.fontSize =
-        Math.random() * 15 + 20 + 'px';
-
-    flower.style.animationDuration =
-        Math.random() * 5 + 6 + 's';
-
-    flowersContainer.appendChild(flower);
-
-    setTimeout(() => {
-        flower.remove();
-    }, 10000);
-}
-
-setInterval(createFlower, 700);
-
-
-// =============================
-// BUKU TAMU SEDERHANA
-// =============================
-
-const rsvpButton = document.querySelector('.rsvp button');
-
-if (rsvpButton) {
-
-    rsvpButton.addEventListener('click', function () {
-
-        const nama =
-            document.querySelector('.rsvp input').value;
-
-        const ucapan =
-            document.querySelector('.rsvp textarea').value;
-
-        if (nama === '' || ucapan === '') {
-
-            alert('Silakan isi nama dan ucapan.');
-
-            return;
-        }
-
-        alert(
-            'Terima kasih ' +
-            nama +
-            ' atas doa dan ucapannya ❤️'
-        );
-
-        document.querySelector('.rsvp input').value = '';
-        document.querySelector('.rsvp textarea').value = '';
+        });
 
     });
 
-}
+});
+```
