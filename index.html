@@ -1,82 +1,124 @@
-```javascript
-AOS.init();
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-function openInvitation(){
+<title>The Wedding Of Benny & Vera</title>
 
-    localStorage.setItem('opened','true');
+<link rel="stylesheet" href="style.css">
 
-    document.getElementById('content').style.display='block';
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    document.querySelector('.hero').style.display='none';
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
 
-    document.getElementById('music')
-        .play()
-        .catch(()=>{});
-}
+<body>
 
-window.onload=function(){
+<img src="images/ornament.png" class="main-ornament">
 
-    if(localStorage.getItem('opened')==='true'){
-        document.getElementById('content').style.display='block';
-        document.querySelector('.hero').style.display='none';
-    }
+<audio id="music" loop>
+    <source src="audio/anugerah-terindah.mp3">
+</audio>
 
-    const params = new URLSearchParams(window.location.search);
-    const guest = params.get('to');
+<!-- COVER -->
+<section class="hero">
+    <div class="hero-content">
+        <p>THE WEDDING OF</p>
+        <h1>Benny & Vera</h1>
+        <p>Kepada Yth.</p>
+        <h2 id="guestName">Bapak/Ibu/Saudara/i</h2>
 
-    if(guest){
-        document.getElementById('guestName').innerHTML = guest;
-    }
-}
+        <button onclick="openInvitation()">
+            Buka Undangan
+        </button>
+    </div>
+</section>
 
-const weddingDate =
-new Date("July 05, 2026 09:00:00").getTime();
+<div id="content">
 
-setInterval(function(){
+<section class="section">
+    <h2>Bismillahirrahmanirrahim</h2>
 
-    const now = new Date().getTime();
-    const distance = weddingDate - now;
+    <p>
+        Dengan memohon rahmat dan ridho Allah SWT,
+        kami bermaksud menyelenggarakan pernikahan putra-putri kami:
+    </p>
+</section>
 
-    const days =
-        Math.floor(distance/(1000*60*60*24));
+<section class="couple">
 
-    const hours =
-        Math.floor((distance%(1000*60*60*24))
-        /(1000*60*60));
+    <div class="card">
+        <img src="images/foto1.jpg">
+        <h2>Benny Rinaldo, S.Kom</h2>
 
-    const minutes =
-        Math.floor((distance%(1000*60*60))
-        /(1000*60));
+        <p>
+            Putra dari<br>
+            Bapak Zainal & Ibu Yurmarismawati
+        </p>
+    </div>
 
-    const seconds =
-        Math.floor((distance%(1000*60))/1000);
+    <div class="ampersand">&</div>
 
-    const countdown =
-    document.getElementById('countdown');
+    <div class="card">
+        <img src="images/foto2.jpg">
+        <h2>Vera Afrianti, S.K.G</h2>
 
-    if(countdown){
-        countdown.innerHTML = `
-            <div class="time-box">
-                <div class="number">${days}</div>
-                <div>Hari</div>
-            </div>
+        <p>
+            Putri dari<br>
+            Bapak Eko Supriyadi & Ibu Alva Nelis
+        </p>
+    </div>
 
-            <div class="time-box">
-                <div class="number">${hours}</div>
-                <div>Jam</div>
-            </div>
+</section>
 
-            <div class="time-box">
-                <div class="number">${minutes}</div>
-                <div>Menit</div>
-            </div>
+<section class="section">
+    <h2>Menuju Hari Bahagia</h2>
+    <div id="countdown"></div>
+</section>
 
-            <div class="time-box">
-                <div class="number">${seconds}</div>
-                <div>Detik</div>
-            </div>
-        `;
-    }
+<section class="section">
+    <h2>Galeri Foto</h2>
 
-},1000);
+    <div class="gallery">
+        <img src="images/foto1.jpg">
+        <img src="images/foto2.jpg">
+        <img src="images/foto3.jpg">
+        <img src="images/foto4.jpg">
+        <img src="images/foto5.jpg">
+        <img src="images/foto6.jpg">
+    </div>
+</section>
+
+<section class="section">
+    <h2>Kisah Cinta Kami</h2>
+
+    <div class="story-card">
+        <h3>Pertemuan</h3>
+        <p>Awal pertemuan kami menjadi awal perjalanan menuju ikatan suci.</p>
+    </div>
+
+    <div class="story-card">
+        <h3>Lamaran</h3>
+        <p>Kami memutuskan melangkah ke jenjang yang lebih serius.</p>
+    </div>
+
+    <div class="story-card">
+        <h3>Menikah</h3>
+        <p>InsyaAllah kami akan mengikat janji suci pernikahan.</p>
+    </div>
+</section>
+
+<footer>
+    <h1>Benny & Vera</h1>
+    <p>Terima kasih atas doa dan kehadirannya.</p>
+</footer>
+
+</div>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
 ```
