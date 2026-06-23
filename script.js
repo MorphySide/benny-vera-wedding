@@ -1,25 +1,38 @@
-// ===========================
-// BUKA UNDANGAN + MUSIK
-// ===========================
+// ===============================
+// AOS ANIMATION
+// ===============================
 
-function openInvitation(){
+AOS.init({
+    duration: 1500,
+    once: false
+});
 
-    document.getElementById("content").style.display="block";
+// ===============================
+// BUKA UNDANGAN
+// ===============================
 
-    document.getElementById("content")
-        .scrollIntoView({behavior:"smooth"});
+function openInvitation() {
 
-    const music=document.getElementById("music");
+    // Tampilkan isi undangan
+    document.getElementById('content').style.display = 'block';
 
-    music.play();
+    // Scroll ke isi undangan
+    document.getElementById('content').scrollIntoView({
+        behavior: 'smooth'
+    });
 
-    document.querySelector(".hero").style.display="none";
+    // Putar musik
+    const music = document.getElementById('music');
+
+    music.play().catch(function (err) {
+        console.log(err);
+    });
+
 }
 
-
-// ===========================
+// ===============================
 // COUNTDOWN
-// ===========================
+// ===============================
 
 const weddingDate = new Date("July 05, 2026 09:00:00").getTime();
 
@@ -46,40 +59,53 @@ const countdown = setInterval(function () {
         / 1000
     );
 
-    const timer = document.getElementById("timer");
+    const countdownElement = document.getElementById('countdown');
 
-    if(timer){
+    if (countdownElement) {
 
-        timer.innerHTML =
-            days + " Hari<br>" +
-            hours + " Jam<br>" +
-            minutes + " Menit<br>" +
-            seconds + " Detik";
+        countdownElement.innerHTML = `
+            <div class="time-box">
+                <span class="number">${days}</span>
+                <span class="label">Hari</span>
+            </div>
 
+            <div class="time-box">
+                <span class="number">${hours}</span>
+                <span class="label">Jam</span>
+            </div>
+
+            <div class="time-box">
+                <span class="number">${minutes}</span>
+                <span class="label">Menit</span>
+            </div>
+
+            <div class="time-box">
+                <span class="number">${seconds}</span>
+                <span class="label">Detik</span>
+            </div>
+        `;
     }
 
     if (distance < 0) {
 
         clearInterval(countdown);
 
-        if(timer){
-            timer.innerHTML = "Acara Sedang Berlangsung";
-        }
-
+        countdownElement.innerHTML =
+            "<h3>Acara Sedang Berlangsung</h3>";
     }
 
 }, 1000);
 
 
-// ===========================
+// ===============================
 // ANIMASI BUNGA JATUH
-// ===========================
+// ===============================
 
 const flowersContainer = document.querySelector('.flowers');
 
 function createFlower() {
 
-    if(!flowersContainer) return;
+    if (!flowersContainer) return;
 
     const flower = document.createElement('div');
 
@@ -97,7 +123,7 @@ function createFlower() {
         (Math.random() * 5 + 5) + 's';
 
     flower.style.fontSize =
-        (Math.random() * 15 + 20) + 'px';
+        (Math.random() * 15 + 18) + 'px';
 
     flowersContainer.appendChild(flower);
 
@@ -110,18 +136,18 @@ function createFlower() {
 setInterval(createFlower, 500);
 
 
-// ===========================
-// EFEK MUNCUL SAAT SCROLL
-// ===========================
+// ===============================
+// PARALLAX EFFECT
+// ===============================
 
-window.addEventListener('scroll', function(){
+window.addEventListener('scroll', function () {
 
-    let scrollTop = window.pageYOffset;
+    const scrollPosition = window.pageYOffset;
 
-    document.querySelectorAll('section').forEach(function(section){
+    document.querySelectorAll('.card').forEach(card => {
 
-        section.style.transform =
-            'translateY(' + (scrollTop * 0.01) + 'px)';
+        card.style.transform =
+            `translateY(${scrollPosition * 0.01}px)`;
 
     });
 
