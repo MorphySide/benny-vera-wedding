@@ -10,6 +10,13 @@ body{
     background:#fdf8f6;
     color:#555;
     overflow-x:hidden;
+
+    /* TAMBAHKAN INI */
+    background-image:url('images/bg-floral.png');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    background-attachment:fixed;
 }
 
 /* ================= COVER ================= */
@@ -359,4 +366,29 @@ footer h1{
         font-size:45px;
     }
 
+}
+
+/* ORNAMEN KIRI DAN KANAN */
+
+body::before,
+body::after{
+    content:'';
+    position:fixed;
+    width:180px;
+    height:180px;
+    background:url('images/ornament.png') no-repeat center;
+    background-size:contain;
+    opacity:.25;
+    z-index:-1;
+}
+
+body::before{
+    top:20px;
+    left:20px;
+}
+
+body::after{
+    bottom:20px;
+    right:20px;
+    transform:rotate(180deg);
 }
