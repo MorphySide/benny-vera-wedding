@@ -1,124 +1,199 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Wedding Of Benny & Vera</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
+
 <body>
 
-    <!-- Hero -->
+    <!-- Animasi bunga -->
+    <div class="flowers"></div>
+
+    <!-- COVER -->
     <section class="hero">
+
         <div class="overlay">
+
             <h4>The Wedding Of</h4>
+
             <h1>Benny & Vera</h1>
-            <p>Minggu, 05 Juli 2026</p>
+
+            <p>05 Juli 2026</p>
 
             <button onclick="openInvitation()">
                 Buka Undangan
             </button>
+
         </div>
+
     </section>
 
-    <!-- Content -->
+    <!-- KONTEN -->
     <div id="content" style="display:none;">
 
-        <section class="quote">
+        <!-- QUOTE -->
+        <section class="quote" data-aos="fade-up">
+
             <h2>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</h2>
+
             <p>
                 "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
                 untukmu pasangan hidup dari jenismu sendiri supaya kamu merasa
                 tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih
                 dan sayang."
             </p>
-            <h4>(QS. Ar-Rum : 21)</h4>
+
+            <h4>QS. Ar-Rum : 21</h4>
+
         </section>
 
-        <section class="couple">
-            <img src="images/cover.jpg" alt="Benny Vera">
+
+        <!-- MEMPELAI -->
+        <section class="couple" data-aos="fade-up">
+
+            <img src="images/cover.jpg" class="couple-photo">
 
             <h2>Benny Rinaldo, S.Kom</h2>
-            <p>Putra dari Bapak Zainal & Ibu Yurmarismawati</p>
+            <p>Putra dari Bapak Zainal & Ibu Yurmiasmawati</p>
 
             <h1>&</h1>
 
-            <h2>Vera Afrianti, S.K.G</h2>
+            <h2>Vera Afzianti, S.K.G</h2>
             <p>Putri dari Bapak Eko Supriyadi & Ibu Alva Nelis</p>
+
         </section>
 
-        <section class="countdown">
+
+        <!-- COUNTDOWN -->
+        <section class="countdown" data-aos="zoom-in">
+
             <h2>Menuju Hari Bahagia</h2>
+
             <div id="timer"></div>
+
         </section>
 
-        <section class="event">
+
+        <!-- ACARA -->
+        <section class="event" data-aos="fade-right">
+
             <h2>Akad Nikah</h2>
+
             <p>Jumat, 26 Juni 2026</p>
-            <p>14.00 WIB s/d Selesai</p>
+
+            <p>14.00 WIB s/d selesai</p>
+
             <p>
                 Jl. Suka Karya, Perumahan Indah Perdana Lestari,
-                Gg. Pelangi Blok C No.33, Pekanbaru
+                Gg. Pelangi Blok C No. 33, Pekanbaru.
             </p>
 
-            <br>
+            <br><br>
 
             <h2>Resepsi</h2>
+
             <p>Minggu, 05 Juli 2026</p>
-            <p>09.00 WIB s/d Selesai</p>
+
+            <p>09.00 WIB s/d selesai</p>
+
             <p>
-                Dusun Satu Jorong Kubu Anau,
-                Nagari Manggopoh, Kec. Lubuk Basung,
-                Kab. Agam
+                Dusun Satu Jorong Kubu Anau, Nagari Manggopoh,
+                Kecamatan Lubuk Basung, Kabupaten Agam.
             </p>
+
         </section>
 
-        <section class="gallery">
+
+        <!-- GALERI -->
+        <section class="gallery" data-aos="fade-left">
+
             <h2>Galeri Foto</h2>
 
             <div class="photos">
+
                 <img src="images/foto1.jpg">
                 <img src="images/foto2.jpg">
                 <img src="images/foto3.jpg">
                 <img src="images/foto4.jpg">
                 <img src="images/foto5.jpg">
                 <img src="images/foto6.jpg">
+
             </div>
+
         </section>
 
-        <section class="location">
+
+        <!-- LOKASI -->
+        <section class="location" data-aos="zoom-in">
+
             <h2>Lokasi Acara</h2>
 
             <a href="https://maps.app.goo.gl/jcJxFQMpgXrMokqD8" target="_blank">
                 Lihat Lokasi
             </a>
+
         </section>
 
-        <section class="rsvp">
+
+        <!-- RSVP -->
+        <section class="rsvp" data-aos="fade-up">
+
             <h2>Konfirmasi Kehadiran</h2>
 
             <a href="https://wa.me/6283185797560" target="_blank">
                 RSVP via WhatsApp
             </a>
+
         </section>
 
-        <section class="footer">
+
+        <!-- FOOTER -->
+        <section class="footer" data-aos="fade-up">
+
             <h1>Benny & Vera</h1>
-            <p>Terima kasih atas doa dan restunya</p>
+
+            <p>
+                Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
+                Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+            </p>
+
         </section>
 
     </div>
 
+
+    <!-- AUDIO -->
     <audio id="music" loop>
         <source src="audio/anugerah-terindah.mp3" type="audio/mp3">
     </audio>
 
-    <div class="flowers"></div>
-    
+
+    <!-- SCRIPT -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
     <script src="script.js"></script>
 
+    <script>
+        AOS.init({
+            duration: 1500,
+            once: false
+        });
+    </script>
+
 </body>
+
 </html>
