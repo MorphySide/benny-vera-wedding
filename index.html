@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -12,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -26,21 +27,21 @@
     <source src="audio/anugerah-terindah.mp3">
 </audio>
 
-<!-- COVER -->
+<!-- HERO -->
 
-<section class="cover">
+<section class="hero">
 
-    <div class="overlay"></div>
+    <div class="hero-content">
 
-    <div class="cover-content">
-
-        <p>The Wedding Of</p>
+        <p>THE WEDDING OF</p>
 
         <h1>Benny & Vera</h1>
 
-        <h3>Kepada Yth.</h3>
+        <p>Kepada Yth.</p>
 
         <h2 id="guestName">Bapak/Ibu/Saudara/i</h2>
+
+        <p class="date">05 Juli 2026</p>
 
         <button onclick="openInvitation()">
             Buka Undangan
@@ -50,106 +51,149 @@
 
 </section>
 
+
 <div id="content">
+
+<!-- PEMBUKA -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+            <span>ASSALAMUALAIKUM</span>
+            <h2>Bismillahirrahmanirrahim</h2>
+
+            <p>
+                Dengan memohon rahmat dan ridho Allah SWT,
+                kami bermaksud menyelenggarakan pernikahan putra-putri kami:
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
 
 <!-- MEMPELAI -->
 
-<section class="section" data-aos="fade-up">
+<section>
 
-    <h2>Bismillahirrahmanirrahim</h2>
+<div class="container">
 
-    <p>
-        Dengan memohon rahmat dan ridho Allah SWT,
-        kami bermaksud menyelenggarakan pernikahan putra-putri kami:
-    </p>
+<div class="couple-wrapper">
 
-</section>
+<div class="couple-card" data-aos="fade-right">
 
-<section class="couple">
+<img src="images/foto1.jpg">
 
-    <div class="card" data-aos="fade-right">
-
-        <img src="images/foto1.jpg">
-
-        <h2>Benny Rinaldo, S.Kom</h2>
-
-        <p>
-            Putra dari<br>
-            Bapak Zainal & Ibu Yurmarismawati
-        </p>
-
-    </div>
-
-    <div class="ampersand">&</div>
-
-    <div class="card" data-aos="fade-left">
-
-        <img src="images/foto2.jpg">
-
-        <h2>Vera Afrianti, S.K.G</h2>
-
-        <p>
-            Putri dari<br>
-            Bapak Eko Supriyadi & Ibu Alva Nelis
-        </p>
-
-    </div>
-
-</section>
-
-<!-- COUNTDOWN -->
-
-<section class="section" data-aos="zoom-in">
-
-<h2>Menuju Hari Bahagia</h2>
-
-<div id="countdown"></div>
-
-</section>
-
-<!-- ACARA -->
-
-<section class="events">
-
-<div class="event-card" data-aos="fade-right">
-
-<h2>Akad Nikah</h2>
-
-<p>Jumat, 26 Juni 2026</p>
-
-<p>14.00 WIB s/d Selesai</p>
+<h3>Benny Rinaldo, S.Kom</h3>
 
 <p>
-Jl. Suka Karya Perumahan Indah Perdana Lestari,
-gg. Pelangi Blok C No 33, Pekanbaru
+Putra dari<br>
+Bapak Zainal & Ibu Yurmarismawati
 </p>
 
 </div>
 
-<div class="event-card" data-aos="fade-left">
+<div class="couple-card" data-aos="fade-left">
 
-<h2>Resepsi</h2>
+<img src="images/foto2.jpg">
+
+<h3>Vera Afrianti, S.K.G</h3>
+
+<p>
+Putri dari<br>
+Bapak Eko Supriyadi & Ibu Alva Nelis
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- COUNTDOWN -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+    <span>COUNTDOWN</span>
+    <h2>Menuju Hari Bahagia</h2>
+</div>
+
+<div id="countdown" class="countdown"></div>
+
+</div>
+
+</section>
+
+
+<!-- ACARA -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+    <span>WEDDING EVENT</span>
+    <h2>Acara Pernikahan</h2>
+</div>
+
+<div class="event-wrapper">
+
+<div class="event-card">
+
+<h3>Akad Nikah</h3>
+
+<p>Jumat, 26 Juni 2026</p>
+<p>14.00 WIB s/d Selesai</p>
+
+<p>
+Jl. Suka Karya Perumahan Indah Perdana Lestari,
+Gg. Pelangi Blok C No.33, Pekanbaru
+</p>
+
+</div>
+
+<div class="event-card">
+
+<h3>Resepsi</h3>
 
 <p>Minggu, 05 Juli 2026</p>
-
 <p>09.00 WIB s/d Selesai</p>
 
 <p>
-Dusun Satu Jorong Kubu Anau
-Nagari Manggopoh
-Kec. Lubuk Basung
+Dusun Satu Jorong Kubu Anau,
+Nagari Manggopoh,
+Kec. Lubuk Basung,
 Kab. Agam
 </p>
 
 </div>
 
+</div>
+
+</div>
+
 </section>
+
 
 <!-- MAP -->
 
-<section class="section" data-aos="fade-up">
+<section>
 
-<h2>Lokasi Acara</h2>
+<div class="container">
+
+<div class="section-title">
+    <span>LOCATION</span>
+    <h2>Lokasi Acara</h2>
+</div>
 
 <a class="btn-map"
 href="https://maps.app.goo.gl/jcJxFQMpgXrMokqD8"
@@ -159,128 +203,196 @@ Lihat Google Maps
 
 </a>
 
+<br><br>
+
 <iframe
 src="https://maps.google.com/maps?q=-0.267303,100.167333&z=15&output=embed">
 </iframe>
 
+</div>
+
 </section>
+
 
 <!-- GALERI -->
 
-<section class="section">
+<section>
 
-<h2>Galeri Foto</h2>
+<div class="container">
 
-<div class="gallery">
+<div class="section-title">
+    <span>OUR MEMORIES</span>
+    <h2>Galeri Foto</h2>
+</div>
 
+<div class="gallery-grid">
+
+<div class="gallery-item">
 <img src="images/foto1.jpg">
+</div>
+
+<div class="gallery-item">
 <img src="images/foto2.jpg">
+</div>
+
+<div class="gallery-item">
 <img src="images/foto3.jpg">
+</div>
+
+<div class="gallery-item">
 <img src="images/foto4.jpg">
+</div>
+
+<div class="gallery-item">
 <img src="images/foto5.jpg">
+</div>
+
+<div class="gallery-item">
 <img src="images/foto6.jpg">
+</div>
+
+</div>
 
 </div>
 
 </section>
 
+
 <!-- KISAH CINTA -->
 
-<section class="section">
+<section>
 
-<h2>Kisah Cinta Kami</h2>
+<div class="container">
 
-<div class="story">
+<div class="section-title">
+    <span>OUR JOURNEY</span>
+    <h2>Kisah Cinta Kami</h2>
+</div>
 
-<div class="story-card">
+<div class="timeline">
+
+<div class="timeline-item">
 <h3>Pertemuan</h3>
 <p>Awal pertemuan kami menjadi awal perjalanan menuju ikatan suci.</p>
 </div>
 
-<div class="story-card">
+<div class="timeline-item">
 <h3>Lamaran</h3>
 <p>Kami memutuskan melangkah ke jenjang yang lebih serius.</p>
 </div>
 
-<div class="story-card">
+<div class="timeline-item">
 <h3>Menikah</h3>
 <p>InsyaAllah kami akan mengikat janji suci pernikahan.</p>
 </div>
 
 </div>
 
+</div>
+
 </section>
 
-<!-- BUKU TAMU -->
+
+<!-- RSVP -->
 
 <section class="rsvp-section">
+
+<div class="container">
+
+<div class="section-title">
+    <span>RSVP</span>
     <h2>Buku Tamu & RSVP</h2>
+</div>
 
-    <div class="rsvp-wrapper">
+<div class="rsvp-wrapper">
 
-        <div class="rsvp-form">
-            <input type="text" id="nama" placeholder="Nama Lengkap">
+<div class="rsvp-form">
 
-            <select id="kehadiran">
-                <option value="Hadir">Hadir</option>
-                <option value="Tidak Hadir">Tidak Hadir</option>
-                <option value="Masih Ragu">Masih Ragu</option>
-            </select>
+<input type="text" id="nama"
+placeholder="Nama Lengkap">
 
-            <textarea id="pesan" placeholder="Tulis doa dan ucapan"></textarea>
+<select id="kehadiran">
+    <option value="Hadir">Hadir</option>
+    <option value="Tidak Hadir">Tidak Hadir</option>
+    <option value="Masih Ragu">Masih Ragu</option>
+</select>
 
-            <button id="kirimUcapan">
-                Kirim Ucapan
-            </button>
-        </div>
+<textarea id="pesan"
+placeholder="Tulis doa dan ucapan"></textarea>
 
-        <div class="list-ucapan">
-            <h3>Doa Restu Sahabat</h3>
-            <div id="daftarUcapan"></div>
-        </div>
+<button id="kirimUcapan">
+Kirim Ucapan
+</button>
 
-    </div>
+</div>
+
+<div class="list-ucapan">
+
+<h3>Doa Restu Sahabat</h3>
+
+<div id="daftarUcapan"></div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- KADO DIGITAL -->
 
-<section class="section">
+<!-- KADO -->
 
-<h2>Kado Digital</h2>
+<section>
+
+<div class="container">
+
+<div class="section-title">
+    <span>WEDDING GIFT</span>
+    <h2>Kado Digital</h2>
+</div>
 
 <div class="gift-card">
 
 <h3>Bank BCA</h3>
-
 <p>1234567890</p>
-
 <p>a.n Benny Rinaldo</p>
 
 </div>
 
+<br>
+
 <div class="gift-card">
 
 <h3>DANA</h3>
-
 <p>083185797560</p>
-
 <p>a.n Benny Rinaldo</p>
+
+</div>
 
 </div>
 
 </section>
 
+
 <!-- TURUT MENGUNDANG -->
 
-<section class="section">
+<section>
 
-<h2>Turut Mengundang</h2>
+<div class="container">
+
+<div class="section-title">
+    <span>FAMILY</span>
+    <h2>Turut Mengundang</h2>
+</div>
 
 <p>
 Rismanidar (Mak Tuo) -
 Yogi Rinaldi, S.Kom (Adik) -
 Rina (Elok)
 </p>
+
+<br>
 
 <h3>Mamak Pusako</h3>
 
@@ -292,6 +404,8 @@ Al-Febrizal - Putra - Jon -
 Heri - Dayat - Afdal
 </p>
 
+<br>
+
 <h3>Kakak/Adik</h3>
 
 <p>
@@ -301,21 +415,27 @@ Zal - Inggih Piyan -
 Israfil - Rizal - Robi
 </p>
 
+</div>
+
 </section>
+
 
 <footer>
 
-<h1>Benny & Vera</h1>
+<h2>Benny & Vera</h2>
 
-<p>Terima kasih atas doa dan kehadirannya</p>
+<p>
+Atas kehadiran dan doa restu Bapak/Ibu/Saudara/i,
+kami mengucapkan terima kasih.
+</p>
 
 </footer>
 
 </div>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 <script src="script.js"></script>
 
 </body>
 </html>
+```
