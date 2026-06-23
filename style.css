@@ -111,7 +111,7 @@ section{
 }
 
 .photos{
-    column-count: 3;
+    columns: 3;
     column-gap: 20px;
     margin-top: 30px;
 }
@@ -122,19 +122,22 @@ section{
     border-radius: 15px;
     box-shadow: 0 3px 8px rgba(0,0,0,.2);
     break-inside: avoid;
-    object-fit: cover;
-    object-position: center;
+    transition: .3s;
+}
+
+.photos img:hover{
+    transform: scale(1.03);
 }
 
 @media(max-width:768px){
     .photos{
-        column-count: 2;
+        columns: 2;
     }
 }
 
 @media(max-width:480px){
     .photos{
-        column-count: 1;
+        columns: 1;
     }
 }
 
