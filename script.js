@@ -2,20 +2,18 @@
 // BUKA UNDANGAN + MUSIK
 // ===========================
 
-function openInvitation() {
+function openInvitation(){
 
-    document.getElementById("content").style.display = "block";
+    document.getElementById("content").style.display="block";
 
-    document.getElementById("content").scrollIntoView({
-        behavior: "smooth"
-    });
+    document.getElementById("content")
+        .scrollIntoView({behavior:"smooth"});
 
-    let music = document.getElementById("music");
+    const music=document.getElementById("music");
 
-    music.play().catch(function(error){
-        console.log("Autoplay diblokir browser");
-    });
+    music.play();
 
+    document.querySelector(".hero").style.display="none";
 }
 
 
