@@ -1,124 +1,546 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>The Wedding Of Benny & Vera</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap"
+rel="stylesheet">
 
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+rel="stylesheet">
+
 </head>
 
 <body>
 
-<img src="images/ornament.png" class="main-ornament">
+<!-- HUJAN BUNGA COVER -->
+<div class="flowers-container"></div>
+
+<!-- ORNAMENT ISI -->
+<img src="images/ornament.png"
+     class="main-ornament">
+
+<!-- AUDIO -->
 
 <audio id="music" loop>
     <source src="audio/anugerah-terindah.mp3">
 </audio>
 
 <!-- COVER -->
+
 <section class="hero">
-    <div class="hero-content">
-        <p>THE WEDDING OF</p>
-        <h1>Benny & Vera</h1>
-        <p>Kepada Yth.</p>
-        <h2 id="guestName">Bapak/Ibu/Saudara/i</h2>
 
-        <button onclick="openInvitation()">
-            Buka Undangan
-        </button>
-    </div>
-</section>
+<div class="hero-content">
 
-<div id="content">
+<p>THE WEDDING OF</p>
 
-<section class="section">
-    <h2>Bismillahirrahmanirrahim</h2>
+<h1>Benny & Vera</h1>
 
-    <p>
-        Dengan memohon rahmat dan ridho Allah SWT,
-        kami bermaksud menyelenggarakan pernikahan putra-putri kami:
-    </p>
-</section>
+<p>Kepada Yth.</p>
 
-<section class="couple">
+<h2 id="guestName">
+Bapak/Ibu/Saudara/i
+</h2>
 
-    <div class="card">
-        <img src="images/foto1.jpg">
-        <h2>Benny Rinaldo, S.Kom</h2>
-
-        <p>
-            Putra dari<br>
-            Bapak Zainal & Ibu Yurmarismawati
-        </p>
-    </div>
-
-    <div class="ampersand">&</div>
-
-    <div class="card">
-        <img src="images/foto2.jpg">
-        <h2>Vera Afrianti, S.K.G</h2>
-
-        <p>
-            Putri dari<br>
-            Bapak Eko Supriyadi & Ibu Alva Nelis
-        </p>
-    </div>
-
-</section>
-
-<section class="section">
-    <h2>Menuju Hari Bahagia</h2>
-    <div id="countdown"></div>
-</section>
-
-<section class="section">
-    <h2>Galeri Foto</h2>
-
-    <div class="gallery">
-        <img src="images/foto1.jpg">
-        <img src="images/foto2.jpg">
-        <img src="images/foto3.jpg">
-        <img src="images/foto4.jpg">
-        <img src="images/foto5.jpg">
-        <img src="images/foto6.jpg">
-    </div>
-</section>
-
-<section class="section">
-    <h2>Kisah Cinta Kami</h2>
-
-    <div class="story-card">
-        <h3>Pertemuan</h3>
-        <p>Awal pertemuan kami menjadi awal perjalanan menuju ikatan suci.</p>
-    </div>
-
-    <div class="story-card">
-        <h3>Lamaran</h3>
-        <p>Kami memutuskan melangkah ke jenjang yang lebih serius.</p>
-    </div>
-
-    <div class="story-card">
-        <h3>Menikah</h3>
-        <p>InsyaAllah kami akan mengikat janji suci pernikahan.</p>
-    </div>
-</section>
-
-<footer>
-    <h1>Benny & Vera</h1>
-    <p>Terima kasih atas doa dan kehadirannya.</p>
-</footer>
+<button onclick="openInvitation()">
+Buka Undangan
+</button>
 
 </div>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+</section>
+
+
+<!-- ISI UNDANGAN -->
+
+<div id="content">
+
+<section class="section"
+         data-aos="fade-up">
+
+<h2>Bismillahirrahmanirrahim</h2>
+
+<p>
+Dengan memohon rahmat dan ridho Allah SWT,
+kami bermaksud menyelenggarakan
+pernikahan putra-putri kami:
+</p>
+
+</section>
+
+<section class="section"
+         data-aos="fade-up">
+
+<h2>Bismillahirrahmanirrahim</h2>
+
+<p>
+Dengan memohon rahmat dan ridho Allah SWT,
+kami bermaksud menyelenggarakan
+pernikahan putra-putri kami:
+</p>
+
+</section>
+
+
+<!-- MEMPELAI -->
+
+<section class="couple">
+
+<div class="card"
+     data-aos="fade-right">
+
+<img src="images/foto1.jpg">
+
+<h2>Benny Rinaldo, S.Kom</h2>
+
+<p>
+Putra dari<br>
+Bapak Zainal<br>
+&<br>
+Ibu Yurmarismawati
+</p>
+
+</div>
+
+<div class="ampersand">&</div>
+
+<div class="card"
+     data-aos="fade-left">
+
+<img src="images/foto2.jpg">
+
+<h2>Vera Afrianti, S.K.G</h2>
+
+<p>
+Putri dari<br>
+Bapak Eko Supriyadi<br>
+&<br>
+Ibu Alva Nelis
+</p>
+
+</div>
+
+</section>
+
+
+<!-- COUNTDOWN -->
+
+<section class="section"
+         data-aos="zoom-in">
+
+<h2>Menuju Hari Bahagia</h2>
+
+<div id="countdown"></div>
+
+</section>
+
+
+<!-- ACARA -->
+
+<section class="events">
+
+<div class="event-card"
+     data-aos="fade-right">
+
+<h2>Akad Nikah</h2>
+
+<p>Jumat, 26 Juni 2026</p>
+
+<p>14.00 WIB s/d Selesai</p>
+
+<p>
+Jl. Suka Karya Perumahan Indah Perdana Lestari,<br>
+Gg. Pelangi Blok C No.33,<br>
+Pekanbaru
+</p>
+
+</div>
+
+
+<div class="event-card"
+     data-aos="fade-left">
+
+<h2>Resepsi</h2>
+
+<p>Minggu, 05 Juli 2026</p>
+
+<p>09.00 WIB s/d Selesai</p>
+
+<p>
+Dusun Satu Jorong Kubu Anau<br>
+Nagari Manggopoh<br>
+Kec. Lubuk Basung<br>
+Kab. Agam
+</p>
+
+</div>
+
+</section>
+
+
+<!-- LOKASI -->
+
+<section class="section"
+         data-aos="fade-up">
+
+<h2>Lokasi Acara</h2>
+
+<a class="btn-map"
+href="https://maps.app.goo.gl/jcJxFQMpgXrMokqD8"
+target="_blank">
+
+Lihat Google Maps
+
+</a>
+
+<br><br>
+
+<iframe
+src="https://maps.google.com/maps?q=-0.267303,100.167333&z=15&output=embed"
+width="100%"
+height="350"
+style="border:0;border-radius:20px;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</section>
+
+<!-- GALERI FOTO -->
+
+<section class="section" data-aos="fade-up">
+
+    <h2>Galeri Foto</h2>
+
+    <div class="gallery">
+
+        <img src="images/foto1.jpg" alt="">
+        <img src="images/foto2.jpg" alt="">
+        <img src="images/foto3.jpg" alt="">
+        <img src="images/foto4.jpg" alt="">
+        <img src="images/foto5.jpg" alt="">
+        <img src="images/foto6.jpg" alt="">
+
+    </div>
+
+</section>
+
+
+<!-- KISAH CINTA -->
+
+<section class="section" data-aos="fade-up">
+
+    <h2>Kisah Cinta Kami</h2>
+
+    <div class="story-card">
+
+        <h3>Pertemuan</h3>
+
+        <p>
+            Awal pertemuan kami menjadi awal perjalanan
+            menuju ikatan suci yang penuh cinta dan kasih sayang.
+        </p>
+
+    </div>
+
+    <div class="story-card">
+
+        <h3>Lamaran</h3>
+
+        <p>
+            Setelah saling mengenal dan memahami,
+            kami memutuskan melangkah ke jenjang yang
+            lebih serius melalui proses lamaran.
+        </p>
+
+    </div>
+
+    <div class="story-card">
+
+        <h3>Menikah</h3>
+
+        <p>
+            Dengan ridho Allah SWT, kami memutuskan
+            untuk mengikat janji suci pernikahan dan
+            memulai kehidupan baru bersama.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- BUKU TAMU -->
+
+<section class="section" data-aos="fade-up">
+
+    <h2>Buku Tamu & RSVP</h2>
+
+    <div class="rsvp-wrapper">
+
+        <div class="rsvp-form">
+
+            <input type="text"
+                   id="nama"
+                   placeholder="Nama Lengkap">
+
+            <select id="kehadiran">
+
+                <option value="Hadir">
+                    Hadir
+                </option>
+
+                <option value="Tidak Hadir">
+                    Tidak Hadir
+                </option>
+
+                <option value="Masih Ragu">
+                    Masih Ragu
+                </option>
+
+            </select>
+
+            <textarea
+                id="pesan"
+                placeholder="Tulis doa dan ucapan">
+            </textarea>
+
+            <button id="kirimUcapan">
+                Kirim Ucapan
+            </button>
+
+        </div>
+
+
+        <div class="list-ucapan">
+
+            <h3>Ucapan Tamu</h3>
+
+            <div id="daftarUcapan"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- KADO DIGITAL -->
+
+<section class="section" data-aos="fade-up">
+
+    <h2>Kado Digital</h2>
+
+    <div class="gift-card">
+
+        <h3>Bank BCA</h3>
+
+        <p>1234567890</p>
+
+        <p>a.n Benny Rinaldo</p>
+
+    </div>
+
+    <br>
+
+    <div class="gift-card">
+
+        <h3>DANA</h3>
+
+        <p>083185797560</p>
+
+        <p>a.n Benny Rinaldo</p>
+
+    </div>
+
+</section>
+
+<!-- TURUT MENGUNDANG -->
+
+<section class="section" data-aos="fade-up">
+
+    <h2>Turut Mengundang</h2>
+
+    <p>
+        Rismanidar (Mak Tuo) <br>
+        Yogi Rinaldi, S.Kom (Adik) <br>
+        Rina (Elok)
+    </p>
+
+    <br><br>
+
+    <h3>Mamak Pusako</h3>
+
+    <p>
+        Ibrahim - Junaidi - Syafrizal -<br>
+        Yoserizal - Syaiful Anwar -<br>
+        Ambo - Labai Firman - Ancun -<br>
+        Al-Febrizal - Putra - Jon -<br>
+        Heri - Dayat - Afdal
+    </p>
+
+    <br><br>
+
+    <h3>Kakak / Adik</h3>
+
+    <p>
+        Abrar, S.E - Madriswandi, S.H -<br>
+        Kuduih - Fitrianto - Munir -<br>
+        Zal - Inggih Piyan -<br>
+        Israfil - Rizal - Robi
+    </p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h1>Benny & Vera</h1>
+
+    <p>
+        Atas kehadiran dan doa restu
+        Bapak/Ibu/Saudara/i, kami mengucapkan
+        terima kasih.
+    </p>
+
+</footer>
+
+</div>
+<!-- AKHIR #content -->
+
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- SCRIPT WEBSITE -->
 <script src="script.js"></script>
+
+
+<!-- FIREBASE RSVP REALTIME -->
+
+<script type="module">
+
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+
+import {
+    getFirestore,
+    collection,
+    addDoc,
+    query,
+    orderBy,
+    onSnapshot,
+    serverTimestamp
+}
+from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+
+const firebaseConfig = {
+
+    apiKey: "AIzaSyA_2QwB5ku4ky_TycYzF59m-tsf8nTiwSs",
+
+    authDomain:
+    "benny-vera-wedding.firebaseapp.com",
+
+    projectId:
+    "benny-vera-wedding",
+
+    storageBucket:
+    "benny-vera-wedding.firebasestorage.app",
+
+    messagingSenderId:
+    "177474821536",
+
+    appId:
+    "1:177474821536:web:dbc5539bc7ceb6707418c5"
+
+};
+
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+
+// KIRIM UCAPAN
+
+document.getElementById('kirimUcapan')
+.addEventListener('click', async () => {
+
+    const nama =
+        document.getElementById('nama').value;
+
+    const hadir =
+        document.getElementById('kehadiran').value;
+
+    const pesan =
+        document.getElementById('pesan').value;
+
+    if(nama === '' || pesan === ''){
+        alert('Silakan isi nama dan ucapan');
+        return;
+    }
+
+    await addDoc(collection(db,'ucapan'),{
+
+        nama:nama,
+        hadir:hadir,
+        pesan:pesan,
+        waktu:serverTimestamp()
+
+    });
+
+    document.getElementById('nama').value='';
+    document.getElementById('pesan').value='';
+
+});
+
+
+// TAMPILKAN UCAPAN
+
+const daftar =
+document.getElementById('daftarUcapan');
+
+const q = query(
+    collection(db,'ucapan'),
+    orderBy('waktu','desc')
+);
+
+onSnapshot(q,(snapshot)=>{
+
+    daftar.innerHTML = '';
+
+    snapshot.forEach((doc)=>{
+
+        const data = doc.data();
+
+        daftar.innerHTML += `
+
+        <div class="card-ucapan">
+
+            <h4>${data.nama}</h4>
+
+            <small>${data.hadir}</small>
+
+            <p>${data.pesan}</p>
+
+        </div>
+
+        `;
+
+    });
+
+});
+
+</script>
 
 </body>
 </html>
-```
