@@ -4,35 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>The Wedding Of Benny & Vera</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Font -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- AOS Animation -->
+    <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 
 <body>
 
-    <!-- Animasi bunga -->
+    <!-- FLOWERS -->
     <div class="flowers"></div>
 
     <!-- COVER -->
-    <section class="hero">
+    <section class="cover" id="cover">
 
-        <div class="overlay">
+        <div class="cover-overlay">
 
-            <h4>The Wedding Of</h4>
+            <p class="small-text">THE WEDDING OF</p>
 
             <h1>Benny & Vera</h1>
 
-            <p>05 Juli 2026</p>
+            <p class="date">05 Juli 2026</p>
 
             <button onclick="openInvitation()">
                 Buka Undangan
@@ -42,19 +40,19 @@
 
     </section>
 
-    <!-- KONTEN -->
-    <div id="content" style="display:none;">
 
-        <!-- QUOTE -->
-        <section class="quote" data-aos="fade-up">
+    <!-- MAIN CONTENT -->
+    <main id="content">
+
+        <!-- AYAT -->
+        <section class="card" data-aos="fade-up">
 
             <h2>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</h2>
 
             <p>
-                "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
-                untukmu pasangan hidup dari jenismu sendiri supaya kamu merasa
-                tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih
-                dan sayang."
+                Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
+                untukmu pasangan hidup dari jenismu sendiri supaya kamu merasa tenteram kepadanya,
+                dan dijadikan-Nya di antaramu rasa kasih dan sayang.
             </p>
 
             <h4>QS. Ar-Rum : 21</h4>
@@ -63,14 +61,14 @@
 
 
         <!-- MEMPELAI -->
-        <section class="couple" data-aos="fade-up">
+        <section class="card" data-aos="fade-up">
 
-            <img src="images/cover.jpg" class="couple-photo">
+            <img src="images/cover.jpg" class="couple-image">
 
             <h2>Benny Rinaldo, S.Kom</h2>
             <p>Putra dari Bapak Zainal & Ibu Yurmiasmawati</p>
 
-            <h1>&</h1>
+            <div class="ampersand">&</div>
 
             <h2>Vera Afzianti, S.K.G</h2>
             <p>Putri dari Bapak Eko Supriyadi & Ibu Alva Nelis</p>
@@ -79,51 +77,53 @@
 
 
         <!-- COUNTDOWN -->
-        <section class="countdown" data-aos="zoom-in">
+        <section class="card" data-aos="zoom-in">
 
             <h2>Menuju Hari Bahagia</h2>
 
-            <div id="timer"></div>
+            <div id="countdown"></div>
 
         </section>
 
 
         <!-- ACARA -->
-        <section class="event" data-aos="fade-right">
+        <section class="card" data-aos="fade-right">
 
             <h2>Akad Nikah</h2>
 
-            <p>Jumat, 26 Juni 2026</p>
+            <h3>Jumat, 26 Juni 2026</h3>
 
-            <p>14.00 WIB s/d selesai</p>
+            <p>Pukul 14.00 WIB s/d Selesai</p>
 
             <p>
                 Jl. Suka Karya, Perumahan Indah Perdana Lestari,
-                Gg. Pelangi Blok C No. 33, Pekanbaru.
+                Gg. Pelangi Blok C No.33, Pekanbaru.
             </p>
 
             <br><br>
 
             <h2>Resepsi</h2>
 
-            <p>Minggu, 05 Juli 2026</p>
+            <h3>Minggu, 05 Juli 2026</h3>
 
-            <p>09.00 WIB s/d selesai</p>
+            <p>Pukul 09.00 WIB s/d Selesai</p>
 
             <p>
-                Dusun Satu Jorong Kubu Anau, Nagari Manggopoh,
-                Kecamatan Lubuk Basung, Kabupaten Agam.
+                Dusun Satu Jorong Kubu Anau,
+                Nagari Manggopoh,
+                Kec. Lubuk Basung,
+                Kab. Agam
             </p>
 
         </section>
 
 
         <!-- GALERI -->
-        <section class="gallery" data-aos="fade-left">
+        <section class="card" data-aos="fade-up">
 
             <h2>Galeri Foto</h2>
 
-            <div class="photos">
+            <div class="gallery">
 
                 <img src="images/foto1.jpg">
                 <img src="images/foto2.jpg">
@@ -137,12 +137,12 @@
         </section>
 
 
-        <!-- LOKASI -->
-        <section class="location" data-aos="zoom-in">
+        <!-- MAP -->
+        <section class="card" data-aos="fade-up">
 
             <h2>Lokasi Acara</h2>
 
-            <a href="https://maps.app.goo.gl/jcJxFQMpgXrMokqD8" target="_blank">
+            <a class="btn" href="https://maps.app.goo.gl/jcJxFQMpgXrMokqD8" target="_blank">
                 Lihat Lokasi
             </a>
 
@@ -150,11 +150,11 @@
 
 
         <!-- RSVP -->
-        <section class="rsvp" data-aos="fade-up">
+        <section class="card" data-aos="fade-up">
 
             <h2>Konfirmasi Kehadiran</h2>
 
-            <a href="https://wa.me/6283185797560" target="_blank">
+            <a class="btn" href="https://wa.me/6283185797560" target="_blank">
                 RSVP via WhatsApp
             </a>
 
@@ -162,37 +162,29 @@
 
 
         <!-- FOOTER -->
-        <section class="footer" data-aos="fade-up">
+        <section class="footer">
 
             <h1>Benny & Vera</h1>
 
             <p>
-                Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
-                Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+                Terima kasih atas doa dan restunya.
             </p>
 
         </section>
 
-    </div>
+    </main>
 
 
-    <!-- AUDIO -->
+    <!-- MUSIC -->
     <audio id="music" loop>
         <source src="audio/anugerah-terindah.mp3" type="audio/mp3">
     </audio>
 
 
-    <!-- SCRIPT -->
+    <!-- JS -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
     <script src="script.js"></script>
-
-    <script>
-        AOS.init({
-            duration: 1500,
-            once: false
-        });
-    </script>
 
 </body>
 
