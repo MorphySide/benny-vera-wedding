@@ -595,3 +595,144 @@ footer h1{
     }
 
 }
+
+/* ==========================================
+   RESPONSIVE MOBILE FINAL
+========================================== */
+
+@media (max-width:768px){
+
+    /* COVER */
+
+    .hero-content{
+        width:90%;
+        padding:40px 25px;
+    }
+
+    .hero h1{
+        font-size:60px;
+    }
+
+    .hero h2{
+        font-size:24px;
+    }
+
+    /* JUDUL SECTION */
+
+    .section h2{
+        font-size:42px;
+    }
+
+    /* MEMPELAI */
+
+    .card{
+        width:100%;
+        max-width:380px;
+    }
+
+    .card img{
+        height:400px;
+    }
+
+    .ampersand{
+        display:none;
+    }
+
+    /* RSVP */
+
+    .rsvp-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    /* GALERI */
+
+    .gallery{
+        columns:2;
+    }
+
+    /* ORNAMENT */
+
+    .main-ornament{
+        width:350px;
+        opacity:.04;
+    }
+
+}
+
+
+@media (max-width:576px){
+
+    /* COVER */
+
+    .hero-content{
+        width:92%;
+        padding:30px 20px;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .hero h2{
+        font-size:20px;
+    }
+
+    .hero button{
+        width:100%;
+    }
+
+    /* JUDUL */
+
+    .section h2{
+        font-size:34px;
+    }
+
+    /* GALERI */
+
+    .gallery{
+        columns:1;
+    }
+
+    .gallery img:nth-child(even){
+        margin-top:0;
+    }
+
+    /* FOTO MEMPELAI */
+
+    .card img{
+        height:350px;
+    }
+
+    /* COUNTDOWN */
+
+    .time-box{
+        width:80px;
+        padding:15px;
+    }
+
+    .number{
+        font-size:28px;
+    }
+
+    /* CARD */
+
+    .card,
+    .event-card,
+    .story-card,
+    .rsvp-form,
+    .list-ucapan,
+    .gift-card{
+
+        padding:20px;
+    }
+
+    /* FLORAL */
+
+    body.content-opened::before,
+    body.content-opened::after{
+
+        width:50px;
+        opacity:.05;
+    }
+
+}
