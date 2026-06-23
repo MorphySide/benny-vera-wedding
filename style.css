@@ -1,1 +1,165 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8f5f0;
+    color:#333;
+    line-height:1.7;
+}
+
+.hero{
+    height:100vh;
+    background:url('images/cover.jpg') center center/cover no-repeat;
+    position:relative;
+}
+
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.55);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.overlay h4{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.overlay h1{
+    font-family:'Great Vibes',cursive;
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.overlay p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+button{
+    background:#c8a96a;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:.9;
+}
+
+section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.quote{
+    background:white;
+}
+
+.quote h2{
+    margin-bottom:20px;
+}
+
+.couple img{
+    width:250px;
+    border-radius:20px;
+    margin-bottom:30px;
+}
+
+.couple h1{
+    font-family:'Great Vibes',cursive;
+    font-size:50px;
+    color:#c8a96a;
+    margin:20px 0;
+}
+
+.countdown{
+    background:#fff;
+}
+
+#timer{
+    font-size:32px;
+    font-weight:bold;
+    color:#c8a96a;
+    margin-top:20px;
+}
+
+.event{
+    background:#f0ece4;
+}
+
+.gallery{
+    background:white;
+}
+
+.photos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+    margin-top:30px;
+}
+
+.photos img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 3px 8px rgba(0,0,0,.2);
+}
+
+.location a,
+.rsvp a{
+    display:inline-block;
+    margin-top:20px;
+    text-decoration:none;
+    background:#c8a96a;
+    color:white;
+    padding:15px 30px;
+    border-radius:30px;
+}
+
+.footer{
+    background:#222;
+    color:white;
+}
+
+.footer h1{
+    font-family:'Great Vibes',cursive;
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+@media(max-width:768px){
+
+    .overlay h1{
+        font-size:50px;
+    }
+
+    .overlay h4{
+        font-size:18px;
+    }
+
+    #timer{
+        font-size:24px;
+    }
+
+    .footer h1{
+        font-size:45px;
+    }
+}
