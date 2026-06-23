@@ -392,3 +392,65 @@ body::after{
     right:20px;
     transform:rotate(180deg);
 }
+.rsvp-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    margin-top:40px;
+}
+
+.rsvp-form,
+.list-ucapan{
+    background:#fff;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
+}
+
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #eee;
+    border-radius:12px;
+}
+
+.rsvp-form textarea{
+    min-height:120px;
+}
+
+.rsvp-form button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#c9a14a;
+    color:white;
+    cursor:pointer;
+}
+
+.card-ucapan{
+    padding:20px;
+    border-radius:15px;
+    border:1px solid #eee;
+    margin-bottom:15px;
+    background:#fafafa;
+}
+
+.card-ucapan h4{
+    color:#c9a14a;
+    margin-bottom:5px;
+}
+
+.card-ucapan span{
+    font-size:13px;
+    color:#777;
+}
+
+@media(max-width:768px){
+    .rsvp-wrapper{
+        grid-template-columns:1fr;
+    }
+}
