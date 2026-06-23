@@ -75,7 +75,7 @@
 
         <p>
             Putra dari<br>
-            Bapak Zainal & Ibu Yurmiasmawati
+            Bapak Zainal & Ibu Yurmarismawati
         </p>
 
     </div>
@@ -213,26 +213,33 @@ src="https://maps.google.com/maps?q=-0.267303,100.167333&z=15&output=embed">
 
 <!-- BUKU TAMU -->
 
-<section class="section">
+<section class="rsvp-section">
+    <h2>Buku Tamu & RSVP</h2>
 
-<h2>Buku Tamu & RSVP</h2>
+    <div class="rsvp-wrapper">
 
-<div class="rsvp">
+        <div class="rsvp-form">
+            <input type="text" id="nama" placeholder="Nama Lengkap">
 
-<input type="text" placeholder="Nama">
+            <select id="kehadiran">
+                <option value="Hadir">Hadir</option>
+                <option value="Tidak Hadir">Tidak Hadir</option>
+                <option value="Masih Ragu">Masih Ragu</option>
+            </select>
 
-<select>
-<option>Konfirmasi Kehadiran</option>
-<option>Hadir</option>
-<option>Tidak Hadir</option>
-</select>
+            <textarea id="pesan" placeholder="Tulis doa dan ucapan"></textarea>
 
-<textarea placeholder="Ucapan dan Doa"></textarea>
+            <button id="kirimUcapan">
+                Kirim Ucapan
+            </button>
+        </div>
 
-<button>Kirim Ucapan</button>
+        <div class="list-ucapan">
+            <h3>Doa Restu Sahabat</h3>
+            <div id="daftarUcapan"></div>
+        </div>
 
-</div>
-
+    </div>
 </section>
 
 <!-- KADO DIGITAL -->
@@ -289,7 +296,7 @@ Heri - Dayat - Afdal
 
 <p>
 Abrar, S.E - Madriswandi, S.H -
-Kudiyih - Fitrianto - Munir -
+Kuduih - Fitrianto - Munir -
 Zal - Inggih Piyan -
 Israfil - Rizal - Robi
 </p>
