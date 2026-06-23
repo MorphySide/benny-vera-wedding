@@ -112,15 +112,37 @@ section{
 
 .photos{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:15px;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
     margin-top:30px;
 }
 
 .photos img{
     width:100%;
+    height:400px; /* semua foto sama tinggi */
+    object-fit:cover; /* memotong foto agar memenuhi kotak */
     border-radius:15px;
     box-shadow:0 3px 8px rgba(0,0,0,.2);
+}
+
+@media(max-width:768px){
+    .photos{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .photos img{
+        height:250px;
+    }
+}
+
+@media(max-width:480px){
+    .photos{
+        grid-template-columns:1fr;
+    }
+
+    .photos img{
+        height:300px;
+    }
 }
 
 .location a,
