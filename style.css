@@ -18,25 +18,74 @@ body{
 /* BACKGROUND SETELAH BUKA UNDANGAN */
 
 .content-opened{
-    background:
-        #faf8f5
-        url('images/bg-floral.png')
-        center top no-repeat;
 
-    background-size:cover;
+    background-color:#faf8f5;
+
 }
 
+
+/* FRAME FLORAL KIRI DAN KANAN */
+
+body.content-opened::before,
+body.content-opened::after{
+
+    content:'';
+
+    position:fixed;
+
+    top:0;
+
+    width:110px;
+    height:100%;
+
+    z-index:-2;
+
+    opacity:.08;
+
+    background-image:
+    url('images/bg-floral.png');
+
+    background-size:contain;
+
+    background-repeat:repeat-y;
+
+    pointer-events:none;
+
+}
+
+body.content-opened::before{
+
+    left:0;
+
+}
+
+body.content-opened::after{
+
+    right:0;
+
+}
 
 /* ORNAMENT SATU SAJA */
 
 .main-ornament{
+
     position:fixed;
-    top:20px;
-    right:20px;
-    width:180px;
-    opacity:.15;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:650px;
+
+    opacity:.05;
+
     z-index:-1;
+
     display:none;
+
+    pointer-events:none;
+
 }
 
 
@@ -501,4 +550,48 @@ footer h1{
     background:#a88a55;
 }
 
+/* CARD PREMIUM */
 
+.card,
+.event-card,
+.story-card,
+.rsvp-form,
+.list-ucapan,
+.gift-card{
+
+    background:
+    rgba(255,255,255,.82);
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+}
+
+
+/* RESPONSIVE ORNAMENT */
+
+@media(max-width:768px){
+
+    .main-ornament{
+
+        width:350px;
+
+        opacity:.04;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    body.content-opened::before,
+    body.content-opened::after{
+
+        width:60px;
+
+        opacity:.05;
+
+    }
+
+}
