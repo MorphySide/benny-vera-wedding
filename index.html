@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wedding Of Benny & Vera</title>
 
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="overlay">
+            <h4>The Wedding Of</h4>
+            <h1>Benny & Vera</h1>
+            <p>Minggu, 05 Juli 2026</p>
+
+            <button onclick="openInvitation()">
+                Buka Undangan
+            </button>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <div id="content" style="display:none;">
+
+        <section class="quote">
+            <h2>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</h2>
+            <p>
+                "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
+                untukmu pasangan hidup dari jenismu sendiri supaya kamu merasa
+                tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih
+                dan sayang."
+            </p>
+            <h4>(QS. Ar-Rum : 21)</h4>
+        </section>
+
+        <section class="couple">
+            <img src="images/cover.jpg" alt="Benny Vera">
+
+            <h2>Benny Rinaldo, S.Kom</h2>
+            <p>Putra dari Bapak Zainal & Ibu Yurmiasmawati</p>
+
+            <h1>&</h1>
+
+            <h2>Vera Afzianti, S.K.G</h2>
+            <p>Putri dari Bapak Eko Supriyadi & Ibu Alva Nelis</p>
+        </section>
+
+        <section class="countdown">
+            <h2>Menuju Hari Bahagia</h2>
+            <div id="timer"></div>
+        </section>
+
+        <section class="event">
+            <h2>Akad Nikah</h2>
+            <p>Jumat, 26 Juni 2026</p>
+            <p>14.00 WIB s/d Selesai</p>
+            <p>
+                Jl. Suka Karya, Perumahan Indah Perdana Lestari,
+                Gg. Pelangi Blok C No.33, Pekanbaru
+            </p>
+
+            <br>
+
+            <h2>Resepsi</h2>
+            <p>Minggu, 05 Juli 2026</p>
+            <p>09.00 WIB s/d Selesai</p>
+            <p>
+                Dusun Satu Jorong Kubu Anau,
+                Nagari Manggopoh, Kec. Lubuk Basung,
+                Kab. Agam
+            </p>
+        </section>
+
+        <section class="gallery">
+            <h2>Galeri Foto</h2>
+
+            <div class="photos">
+                <img src="images/foto1.jpg">
+                <img src="images/foto2.jpg">
+                <img src="images/foto3.jpg">
+                <img src="images/foto4.jpg">
+                <img src="images/foto5.jpg">
+                <img src="images/foto6.jpg">
+            </div>
+        </section>
+
+        <section class="location">
+            <h2>Lokasi Acara</h2>
+
+            <a href="https://maps.app.goo.gl/jcJxFQMpgXrMokqD8" target="_blank">
+                Lihat Lokasi
+            </a>
+        </section>
+
+        <section class="rsvp">
+            <h2>Konfirmasi Kehadiran</h2>
+
+            <a href="https://wa.me/6283185797560" target="_blank">
+                RSVP via WhatsApp
+            </a>
+        </section>
+
+        <section class="footer">
+            <h1>Benny & Vera</h1>
+            <p>Terima kasih atas doa dan restunya</p>
+        </section>
+
+    </div>
+
+    <audio id="music" loop>
+        <source src="audio/anugerah-terindah.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
